@@ -1,0 +1,22 @@
+=========================================
+        WARNING - DOAS Service enabled
+Please do not make any manual changes on this
+server, as they may be overwritten or result in 
+unexpected/unpredictable system behaviour
+=========================================
+
+Host Name:	<Host Name>
+Machine Domain:	<Machine Domain>
+Boot Time:	<Boot Time>
+Memory:	<Memory>
+
+IP Address:	<IP Address>
+Subnet Mask:	<Subnet Mask>
+Default Gateway:	<Default Gateway>
+DNS Server:	<DNS Server>
+
+OS Version:	<OS Version>
+Service Pack:	<Service Pack>
+
+Volumes:	<Volumes>
+Free Space:	<Free Space>
