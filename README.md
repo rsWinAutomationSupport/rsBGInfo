@@ -1,13 +1,30 @@
 # rsBGInfo
-DSC Composite Resource module to deploy BGInfo on to managed nodes
+The rsBGInfo composite DSC resource module to deploy [BGInfo utility](https://technet.microsoft.com/en-us/library/bb897557.aspx) and accompanying configuration.
 
-### Example
+Please note that this module has a dependency on rsFileDownload
 
-    Node localhost
+## Versions
+
+### 1.0.0
+ *  Initial release
+
+
+## Examples
+
+    Configuration Sample_BGInfo
     {
-    	rsBGInfo DeployBGInfo
+    	param
+    	(
+    		[string[]]$NodeName = 'localhost'
+    	)
+    	Import-DscResource -Module rsBGInfo 
+    	Node $NodeName
     	{
-    		Ensure = "Present"
+    		rsBGInfo DeployBGInfo
+    		{
+    			Ensure       = "Present"
+    			BGConfigPath = "c:\resources\BGInfo_Config.bgi"
+    		}
     	}
     }
 
