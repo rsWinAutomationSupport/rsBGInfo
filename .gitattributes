@@ -20,3 +20,8 @@
 # Denote all files that are truly binary and should not be mergeable.
 .dll binary
 .exe binary
+
+.mof	diff=astextplain
+.ps1    diff=astextplain
+.psm1   diff=astextplain
+.psd1   diff=astextplain
