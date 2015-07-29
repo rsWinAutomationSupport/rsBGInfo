@@ -1,5 +1,5 @@
 # rsBGInfo
-The rsBGInfo composite DSC resource module to deploy [BGInfo utility](https://technet.microsoft.com/en-us/library/bb897557.aspx) and accompanying default configuration stored within the 'Config' folder of this repository.
+The rsBGInfo composite DSC resource module can be used to deploy [BGInfo utility](https://technet.microsoft.com/en-us/library/bb897557.aspx) and accompanying configuration (.bgi) file. Only the Ensure parameter is mandatory. All other parameters come with default values, but can be overridden to suit most use-cases. 
 
 ### Parameters
  * **Ensure**: Enable/disable BGInfo. Default "Present"
@@ -15,6 +15,8 @@ The rsBGInfo composite DSC resource module to deploy [BGInfo utility](https://te
 
 ### 1.0.0
  *  Initial release
+	 *  Download and deployment of BGInfo utility from a URL
+	 *  Download and deployment of BGInfo utility configuration file form a URL
 
 
 ## Examples
@@ -51,7 +53,7 @@ Deploy BGInfo with custom configuration file in an alternate location:
     		rsBGInfo DeployCustomBGInfo
     		{
     			Ensure       = "Present"
-				ConfSrc      = "http://some=other/location/my_config.bgi"
+				ConfSrc      = "http://some_other/location/my_config.bgi"
 				ConfPath     = "C:\Program Files\BgInfo"
     		}
     	}
